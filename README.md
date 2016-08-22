@@ -1,2 +1,2 @@
 # mongo_crud
-knoledge sharing on mongodb
+knowledge sharing on mongodb
