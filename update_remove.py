@@ -64,11 +64,6 @@ def query_document(users):
     print "condition: status = A and (age < 30 or type = 1)"
     print print_cursor_obj(cur), "\n"
 
-    # exact match on embedded document - 
-    cur = users.find({"favorites": {"artist": "Picasso", "food": "pizza"}})
-    print "condition: favorites = {artist: Picasso, food: pizza}"
-    print print_cursor_obj(cur), "\n"
-
     # equality match within the embedded document - 
     cur = users.find({"favorites.artist": "Picasso"})
     print "condition: favorites = {artist: Picasso}"
@@ -98,7 +93,7 @@ def main(args):
     db = conn.get_db()
 
     # create and get new collection
-    users2 = conn.create_collection("users2")
+    #users2 = conn.create_collection("users2")
 
     # getting user collection
     users = db['users']
